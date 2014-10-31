@@ -15,8 +15,76 @@ body
 	:left 0px
 	:overflow hidden
 	:z-index 0
-	:background url(../wallpapers/wallpaper-2373631.jpg) no-repeat
+	:background url(../wallpapers/world-wallpaper-1.jpg) no-repeat
 	:background-size cover
+
+#hackasoton-content
+	:padding-top 5%
+	:width 950px
+	:margin auto auto
+	:color white
+	:font-family Orbitron
+
+
+#hackasoton-home-title
+	@extend .flashing-text
+
+	font-size: 7em
+
+	div
+		width: 550px 
+		border: solid
+
+#hackasoton-home-global
+	@extend .flashing-text
+
+	font-size: 10em
+
+#hackasoton-home-dates
+	-webkit-text-stroke-width: 1px !important
+
+	@extend .flashing-text
+
+	font-size: 2.8em
+	float: right
+
+#hackasoton-home-slogan
+	margin-top: 50px
+	font-size: 2em
+	margin-bottom: 130px
+
+#hackasoton-home-button
+	@extend .flashing-text
+
+	-webkit-text-stroke-width: 1px !important
+	color: blue !important
+
+	margin: auto auto
+	padding: 5px 5px 5px 5px
+	font-size: 3em
+	background: white
+	width: 300px
+	border-radius: 15px
+
+.flashing-text
+	-webkit-text-stroke-width: 3px
+	-webkit-text-stroke-color: black
+
+	-webkit-animation: flash-title 4s cubic-bezier(.19,1.12,.02,1) infinite
+	-moz-animation:    flash-title 4s cubic-bezier(.19,1.12,.02,1) infinite
+	-o-animation:      flash-title 4s cubic-bezier(.19,1.12,.02,1) infinite
+	animation:         flash-title 4s cubic-bezier(.19,1.12,.02,1) infinite
+
+@-webkit-keyframes flash-title
+	0%
+		color: white
+		-webkit-text-stroke-color: black
+	50%
+		color: black
+		-webkit-text-stroke-color: white
+	100%
+		color: white
+		-webkit-text-stroke-color: black
 
 #hackasoton-logo
 	:text-indent -10000px

@@ -57,6 +57,9 @@
 	var parallax = function() {
 		var scrolled = $(window).scrollTop();
 
+		var paralaxHome = scrolled/4;
+		$("#hackasoton-content").css("margin-top", -paralaxHome );
+
 		var parallaxAndroid = height - scrolled;
 		if(parallaxAndroid < 200 && parallaxAndroid > -100) {
 			console.log(height, scrolled, parallaxAndroid);
