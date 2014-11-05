@@ -1,7 +1,7 @@
 (function() {
 	var height;
 	var heightPrize = document.getElementById('prizes').offsetHeight;
-	var offsetPrizes = document.getElementById('event').offsetHeight 
+	var offsetPrizes = document.getElementById('event').offsetHeight
 							+ document.getElementById('photos').offsetHeight
 							+ heightPrize;
 
@@ -44,9 +44,7 @@
 			var q = max / mousemax;
 			var scr = e.clientX * q;
 
-			console.log("scrollto", scr);
-
-			p.scrollLeft = max - scr;
+			p.scrollLeft = scr;
 		});
 	});
 
@@ -82,7 +80,7 @@
 		}
 	}
 
-	$(window).scroll(parallax); 
+	$(window).scroll(parallax);
 
 })();
 
@@ -97,7 +95,7 @@ $(document).ready(function() {
   }
   var locationPath = filterPath(location.pathname);
   var scrollElem = scrollableElement('html', 'body');
- 
+
   $('a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
@@ -115,7 +113,7 @@ $(document).ready(function() {
       }
     }
   });
- 
+
   // use the first element that is "scrollable"
   function scrollableElement(els) {
     for (var i = 0, argLength = arguments.length; i <argLength; i++) {
@@ -134,5 +132,5 @@ $(document).ready(function() {
     }
     return [];
   }
- 
+
 });
